@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+</head>
+
+<body>
+
+    <!-- Q3 Button -->
+    <!-- <div id="content">
+        <p></p>
+    </div>
+    <button class="buttom-add" type="button" id="btnAdd" onclick="addPara()">Add Paragraph</button> -->
+
+
+    <!-- Question 4 -->
+    <!-- <h3>Drinks</h3>
+    <ul id="items">
+        <li>Pepsi</li>
+    </ul>
+
+    <button class="buttom-add" type="button" id="btnAdd" onclick="addItemToList()">Add Drinks</button> -->
+
+
+    <!-- Question 5 -->
+
+    <!-- <p id="changeColor"></p>
+    <button onclick="changeBgc(this)">Change Background Color</button> -->
+
+
+    <!-- Question 8 -->
+    <div>
+        <button onclick="myObjects()">Add Data</button>
+    </div>
+
+    <script>
+
+        // Question # 01:
+
+        // function add (numdiff) {
+        //     return function (numadd) {
+        //         console.log(numdiff + numadd);
+        //     }
+        // }
+
+        // let innerFunction = add(5);
+        // innerFunction(10);
+
+
+        // Question # 02
+
+
+        // let arr = ["a", "b", "c", "d", "e", "f"];
+        // let val = '';
+        // add(val);
+        // function add(value) {
+        //     value = prompt("Enter value");
+        //     if(arr.includes(value)){
+        //         return true;
+        //         console.log(true);
+
+        //     }
+        //     else {
+        //         return false;
+        //         console.log(false);
+        //     }
+        //     add(val);
+        // }
+
+
+        // Question # 03:
+
+        // let content = document.querySelector('content');
+
+        // function addPara() {
+        //     let newItem = prompt("Add New Para");
+        //     if (newItem != null) {
+        //         let div = document.querySelector('div');
+        //         let p = document.createElement('p');
+        //         div.appendChild(p);
+        //         p.innerHTML = newItem;
+        //     }
+        // }
+
+        // Question 4
+
+        // let items = document.querySelector('items');
+
+        // function addItemToList() {
+        //     let newItem = prompt("Add item to list");
+        //     if (newItem != null) {
+        //         let ul = document.querySelector('ul');
+        //         let li = document.createElement('li');
+        //         ul.appendChild(li);
+        //         li.innerHTML = newItem;
+        //     }
+        // }
+
+        // Question 5
+
+        // let myPara = document.getElementById("changeColor");
+        // myPara.innerHTML = "<p>Javascript Assignment</p>";
+
+
+        // function changeBgc(el) {
+        //     myPara.style.backgroundColor = "#000";
+        //     myPara.style.color = "#fff";
+
+        // }
+
+        // Question 6,7
+
+
+        // let myObj = {
+        //     name: "Ayan",
+        //     age: 16
+        // };
+
+        // let myObjNew = JSON.stringify(myObj);
+
+        // localStorage.setItem("myObj", myObjNew);
+
+        // let myObj_deseralized = JSON.parse(localStorage.getItem("myObj"));
+        // console.log(myObj_deseralized);
+
+        // Question 8
+
+        let prevData = localStorage.getItem("myData")
+        let myData = JSON.parse(prevData);
+        function myObjects() {
+            let myObj = {
+                name: prompt("Enter Name"),
+                age: prompt("Enter Age")
+            };
+            myData.push(myObj);
+            console.log(myData);
+            let stringify = JSON.stringify(myData);
+            localStorage.setItem("myData", stringify);
+        }
+
+
+
+
+    </script>
+
+</body>
+
+</html>
